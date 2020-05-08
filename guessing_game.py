@@ -61,7 +61,8 @@ def start_game():
         if guess < low_number or guess > high_number:
             print(
                 f"\nYour guess must be a number between {low_number} "
-                f"and {high_number}. Try again!")
+                f"and {high_number}. Try again!"
+                )
             continue
         elif guess > target_number:
             print(f"\nThe number is lower than {guess}. Try again!")
@@ -71,7 +72,8 @@ def start_game():
             continue
         elif guess == target_number:
             print(
-                f"\nYou guessed the number in {total_guesses} tries!\nYou win!"
+                f"\nYou guessed the number in {total_guesses} tries!\n"
+                "You win!"
                 )
             break
     if total_guesses < high_score:
@@ -79,5 +81,13 @@ def start_game():
         high_score = total_guesses
         
     offer_retry()
-    
-start_game()
+
+print(__name__)
+if __name__ == "__main__":
+    try:
+        start_game()
+    except KeyboardInterrupt:
+        print(
+            "Oops, your game was interrupted."
+            "Please type 'python guessing_game.py to retry.'"
+        )
