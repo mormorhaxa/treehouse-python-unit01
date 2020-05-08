@@ -11,7 +11,7 @@ Welcome, Friends, to the Game
     """.center(40))
     
     if high_score < 1000:
-        print("The record thus far is {} guesses.".format(high_score))
+        print(f"The record thus far is {high_score} guesses.")
 
 
 def create_target_number(low, high):
